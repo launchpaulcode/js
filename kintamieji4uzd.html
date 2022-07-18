@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Įvedami skaičiai -a, b, c –kraštinių ilgiai, trys kintamieji (naudokite ​Math.random()​ funkcija nuo 1 iki 10)  (sveiki skaičiai). Parašykite JavaScript programą, kuri nustatytų, ar galima sudaryti ,trikampį ir atsakymą atspausdintų.  -->
+    <script>
+    let a = Math.round(Math.random() * 9 +1);
+    let b = Math.round(Math.random() * 9 +1);
+    let c = Math.round(Math.random() * 9 +1);
+
+    console.log("skaicius 1 - " + a);
+    console.log("skaicius 2 - " + b);
+    console.log("skaicius 3 - " + c);
+
+    let kampasAcos =  ((b*b + c*c - a*a) / (2 * b * c)) ;
+    let kampasBcos =  ((a*a + c*c - b*b) / (2 * a * c)) ;
+    let kampasCcos =  ((a*a + b*b - c*c) / (2 * b * a)) ;
+
+    let kampas1 = Math.acos(kampasAcos)*(180/Math.PI);
+    let kampas2 = Math.acos(kampasBcos)*(180/Math.PI);
+    let kampas3 = Math.acos(kampasCcos)*(180/Math.PI);
+
+    console.log("kampasA = " + Math.round(kampas1) );
+    console.log("kampasB =" + Math.round(kampas2 ));
+    console.log("kampasC = " + Math.round(kampas3 ));
+
+
+    if ( Math.round(kampas1+kampas2+kampas3)==180 ) 
+    {
+        if ( (kampas1!==0 && kampas2!==0) || (kampas3!==0 && kampas2!==0) || (kampas1!==0 && kampas3!==0))
+        {
+        console.log("trikampis EGZISTUOJA, nes "+ " " + "kampas 1 = " + kampas1 + "kampas 2 = " + kampas2 + "kampas 3 = " + kampas3 + "kampu suma yra " + (kampas1+kampas2+kampas3))
+        }
+
+        else  
+        {
+            console.log("tokio trikampio NERA" + " " + "kampas 1 = " + kampas1 +  "kampas 2 = " + kampas2 + "kampas 3 = " + kampas3 + "kampu suma yra " + (kampas1+kampas2+kampas3) + " bet krastines yra vienoje tieseje")
+        }
+
+    }
+    
+
+    else  
+    {
+        console.log("tokio trikampio NERA" + " " + "kampas 1 = " + kampas1 +  "kampas 2 = " + kampas2 + "kampas 3 = " + kampas3 + "kampu suma yra " + (kampas1+kampas2+kampas3))
+    }
+
+    
+    </script>
+
+    
+</body>
+</html>

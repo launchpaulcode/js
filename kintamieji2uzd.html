@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Naudokite funkcija Math.random(). Sukurkite du kintamuosius ir naudodamiesi funkcija Math.random() jiems priskirkite atsitiktines reikšmes nuo 0 iki 4 (sveiki skaičiai). Didesnę reikšmę padalinkite ,iš mažesnės. Atspausdinkite rezultatą jį suapvalinę iki 2 skaičių po kablelio. -->
+    
+    <script>
+
+    let pirmas = Math.round(Math.random() * 4);
+    let antras = Math.round(Math.random() * 4);
+    console.log( "pirmas yra " + pirmas);
+    console.log("antras yra " + antras);
+    console.log("pirmas / antras " + antras / pirmas);
+    console.log("antras / pirmas " + pirmas / antras);
+
+    if (pirmas >=antras )
+    {
+        if (antras == 0)
+            {
+            console.log("dalyba is 0 negalima");
+            }
+        else 
+            {
+             console.log
+                ( 
+
+                (Math.round((pirmas / antras) * 100)) 
+                / 100
+
+                );
+            }
+       
+
+    }
+
+    else 
+    {
+        if (pirmas == 0) 
+            {
+            console.log("dalyba is 0 negalima");
+            }
+        else 
+            {
+             console.log
+             (
+                (Math.round( (antras / pirmas)  * 100)) 
+                / 100
+                
+             );
+            }
+
+    }
+
+ 
+
+    </script>
+</body>
+</html>

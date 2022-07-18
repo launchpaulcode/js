@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Naudokite funkcija Math.random(). Sukurkite tris kintamuosius ir naudodamiesi funkcija Math.random() jiems priskirkite atsitiktines reikšmes nuo 0 iki 25 (sveiki skaičiai). Raskite ir atspausdinkite kintąmąjį turintį vidurinę reikšmę -->
+    
+<script>
+    let a = Math.round(Math.random() * 25);
+    let b = Math.round(Math.random() * 25);
+    let c = Math.round(Math.random() * 25);
+
+    console.log("skaicius 1 - " + a);
+    console.log("skaicius 2 - " + b);
+    console.log("skaicius 3 - " + c);
+
+    if ( (a>=b && a<=c )|| (a>=c && a<=b) ) 
+    {
+        console.log ( "vidurinis yra" + a)
+
+    }
+    
+    else if ( (b>=a && b<=c )||( b<=a && b>=c)) 
+        { 
+            console.log ("vidurinis yra" + b)
+
+        }
+    else 
+    {
+        
+
+        console.log("vidurinis yra" + c)
+
+    }
+    
+
+   
+
+
+
+</script>
+</body>
+</html>
